@@ -1,0 +1,10 @@
+{
+  "search.exclude": {
+    "**/.sst": true
+  },
+  "cSpell.words": [
+    "currfilename",
+    "ipip",
+    "ipipneo"
+  ]
+}

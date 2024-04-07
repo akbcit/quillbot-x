@@ -1,0 +1,30 @@
+.nav-links {
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-family: "Bebas Neue", sans-serif;
+
+    z-index: 100;
+
+    a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease, transform 0.3s ease;
+        font-weight: 600;
+        font-size: 2rem;
+        user-select: none;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            color: #378aa6;
+
+        }
+    }
+}

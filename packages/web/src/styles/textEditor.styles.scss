@@ -1,0 +1,83 @@
+// Define common border and shadow styles as mixins
+@mixin border-and-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+// Define common background gradients as a mixin with parameters
+@mixin background-gradient($startColor, $endColor) {
+  background: 
+    linear-gradient(#000, #000) padding-box,  
+    linear-gradient(to right, $startColor, $endColor) border-box;
+}
+
+.error-container{
+  min-height: 2rem;
+  padding: 0.2rem;
+  color: white;
+  font-size: 1rem;
+}
+
+// Common font styles
+$font-family: "Roboto", sans-serif;
+$font-size: 15px;
+$font-color: #fff;
+
+.customHeightEditor {
+  .ql-container.ql-snow {
+    @include border-and-shadow;
+    @include background-gradient(#FF7E79, #87BFFF);
+    margin-top: 20px;
+  }
+
+  .ql-toolbar {
+    @include border-and-shadow;
+    // Overriding the shadow color for ql-toolbar
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    color: $font-color;
+    @include background-gradient(#FF7E79, #87BFFF);
+  }
+
+  .ql-editor {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-color;
+    margin-top: 10px;
+    border-radius: 10px;
+    min-height: 24rem;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  &.loading-state {
+    .ql-container.ql-snow, .ql-editor {
+      @include background-gradient(#a8a5a5, #a3a3a3);
+      cursor: none;
+    }
+  }
+}
+
+.ql-tooltip {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: -10%;
+}
+
+/* Targeting the toolbar buttons */
+.ql-toolbar.ql-snow button {
+  background-color: #000;
+  color: #fff;
+}
+
+.ql-toolbar.ql-snow button:hover {
+  background-color: #222;
+}
+
+/* Adjusting the color of the picker labels specifically, if needed */
+.ql-toolbar.ql-snow .ql-picker-label {
+  color: #fff;
+}

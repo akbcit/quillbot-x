@@ -1,0 +1,31 @@
+.typewriter-container {
+  margin-top: 25px;
+    user-select: none;
+    display: flex;
+    align-items: center;  
+    gap: 10px; 
+   
+  
+     span {
+      font-size: 24px;
+      font-family: sans-serif, "Segoe UI", "San Francisco", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #efd94b;
+      text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3);
+    }
+  
+    img {
+      width: 40px;
+      height: auto;
+      vertical-align: middle;
+    }
+  
+    // If you decide to use the Typewriter effect for the text only
+    .Typewriter__wrapper {
+      font-size: 24px;
+    }
+  
+    .Typewriter__cursor {
+      font-size: 24px;
+    }
+  }
+  

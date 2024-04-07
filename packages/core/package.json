@@ -1,0 +1,22 @@
+{
+  "name": "@project-x/core",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit",
+    "db:generate": "drizzle-kit generate:pg --schema src/db/schema/posts.ts --out ./drizzle"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "drizzle-kit": "^0.20.14",
+    "sst": "^2.41.3",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.0",
+    "drizzle-orm": "^0.30.6",
+    "openai": "^4.31.0",
+    "zod": "^3.22.4"
+  }
+}
